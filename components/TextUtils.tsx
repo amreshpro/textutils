@@ -1,7 +1,7 @@
-import useThemeStore from "@/store/themeStore";
-
-import Feature from "./Feature";
+"use client"
 import { useState } from "react";
+import useThemeStore from "@/store/themeStore";
+import Feature from "./Feature";
 
 export default function TextUtils() {
   const isDarkMode = useThemeStore((state) => state.isDarkMode);
@@ -20,6 +20,16 @@ export default function TextUtils() {
           isDarkMode ? "dark-box " : "light-box "
         } rounded-lg  outline-none p-4`}
       />
+
+
+<div className="details">
+  <h1 className="text-xl">Preview</h1>
+  <p className="mb-2">{text}</p>
+  <h1>Total Words: {text.split(/\s+/).filter(word => word !== '').length}</h1>
+
+
+</div>
+
     </div>
   );
 }
