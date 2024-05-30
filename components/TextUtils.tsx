@@ -1,7 +1,6 @@
 import useThemeStore from "@/store/themeStore";
-import BottomFeature from "./BottomFeature";
 
-import TopFeature from "./TopFeature";
+import Feature from "./Feature";
 import { useState } from "react";
 
 export default function TextUtils() {
@@ -11,17 +10,16 @@ export default function TextUtils() {
 
   return (
     <div className="flex flex-col gap-4 p-2">
-      <TopFeature text={text} setText={setText} />
+      <Feature text={text} setText={setText} />
       <textarea
         rows={10}
         cols={10}
         value={text}
-        onInput={(e:any)=>setText(e.target.value)}
+        onInput={(e: any) => setText(e.target.value)}
         className={` ${
           isDarkMode ? "dark-box " : "light-box "
         } rounded-lg  outline-none p-4`}
       />
-   <BottomFeature text={text} setText={setText} />
     </div>
   );
 }

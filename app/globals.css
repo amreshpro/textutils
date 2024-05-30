@@ -7,8 +7,8 @@
   --primary: #202c33;
   --secondary: #e4f7f6;
   --ternary: #ff21ec;
-  --btn-light:#90cef7;
-  --btn-dark:#2b3941;
+  --btn-light: #90cef7;
+  --btn-dark: #2b3941;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
@@ -25,24 +25,17 @@
   background: var(--light);
 }
 
-.dark-box{
+.dark-box {
   background: var(--primary);
-
 }
-.light-box{
+.light-box {
   background: var(--secondary);
 }
 
-.dark-btn{
-background:var(--btn-dark);
-padding: 5px 8px 5px 8px;
-border-radius: 5px;
+.dark-btn {
+  background: var(--btn-dark);
 }
-.light-btn{
-background: var(--btn-light);
-padding: 5px 8px 5px 8px;
-border-radius: 5px;
-
-
-
+.light-btn {
+  color: #eee;
+  background: #0099ff;
 }
