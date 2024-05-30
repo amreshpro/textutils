@@ -1,33 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --dark: #1b262c;
+  --light: #bbe1fa;
+  --primary: #202c33;
+  --secondary: #e4f7f6;
+  --ternary: #ff21ec;
+  --btn-light:#90cef7;
+  --btn-dark:#2b3941;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Source Sans',sans-serif; */
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark {
+  background: var(--dark);
+  color: var(--light);
+}
+.light {
+  color: var(--dark);
+  background: var(--light);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.dark-box{
+  background: var(--primary);
+
+}
+.light-box{
+  background: var(--secondary);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.dark-btn{
+background:var(--btn-dark);
+padding: 5px 8px 5px 8px;
+border-radius: 5px;
+}
+.light-btn{
+background: var(--btn-light);
+padding: 5px 8px 5px 8px;
+border-radius: 5px;
+
+
+
 }
